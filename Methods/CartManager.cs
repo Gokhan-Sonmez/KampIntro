@@ -7,16 +7,15 @@ namespace Methods
     class CartManager
     {
         //naming convention
-        //normal parantez varsa bir method çalışıyor
-        //reusability
+        //syntax
         public void Add(Product product)
         {
             Console.WriteLine("Sepete eklendi" + " : " + product.ProductName);
         }
-
-        public void Update(Product product)
+        
+        public void Add2(string urunAdi, string aciklama, double fiyat, int stokAdedi)
         {
-            Console.WriteLine("Ürün Güncellendi" + " : " + product.ProductName);
+            Console.WriteLine("Sepete eklendi" + " : " + urunAdi);
         }
     }
 }
