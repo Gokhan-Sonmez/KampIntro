@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Methods
 {
-    //encapsulation --kapsülleme --  Daha sonradan özellik ekleyip programın akışını bozmadan devam ediyoruz.
+    //encapsulation --kapsülleme --
     class Product
     {
         public int Id { get; set; }
