@@ -7,6 +7,8 @@ namespace OOP3
     {
         static void Main(string[] args)
         {
+
+
             IKrediManager ihtiyacKrediManager = new IhtiyacKrediManager();
             IKrediManager tasitKrediManager = new TasitKrediManager();
             IKrediManager konutKrediManager = new KonutKrediManager();
@@ -15,12 +17,14 @@ namespace OOP3
             ILoggerService databaseLogerService = new DatabaseLoggerService();
             ILoggerService fileLogerService = new FileLoggerService();
 
-            BasvuruManager basvuruManager = new BasvuruManager();
-            basvuruManager.BasvuruYap(ihtiyacKrediManager, databaseLogerService);
-
             List<IKrediManager> krediler = new List<IKrediManager>() { ihtiyacKrediManager, tasitKrediManager };
-           // basvuruManager.KrediOnBilgilendirmesiYap(krediler);
-        
+            List<ILoggerService> loggerServices = new List<ILoggerService>() { databaseLogerService, fileLogerService };
+
+            BasvuruManager basvuruManager = new BasvuruManager();
+            basvuruManager.BasvuruYap(esnafKrediManager, loggerServices);
+
+            // basvuruManager.KrediOnBilgilendirmesiYap(krediler);
+
         }
     }
 }
